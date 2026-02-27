@@ -1,0 +1,38 @@
+.navbar-custom {position: static;
+background: var(--color-dark);}
+.gallery {
+  column-count: 3; /* три колонки */
+  column-gap: 15px;
+}
+
+.gallery-item {
+  margin-bottom: 15px;
+  break-inside: avoid; /* чтобы элементы не разрывались */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 768px) {
+  .gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    column-count: 1;
+  }
+}
